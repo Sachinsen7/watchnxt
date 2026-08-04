@@ -23,7 +23,7 @@ export function CardBase({ children, className, onClick }: CardBaseProps) {
       whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.18, ease: "easeOut" }}
       className={cn(
-        "relative overflow-hidden rounded-md border border-white/10 bg-surface outline-none",
+        "relative block w-full overflow-hidden rounded-md border border-white/10 bg-surface outline-none",
         "hover:z-20 hover:shadow-glow-card",
         className,
       )}

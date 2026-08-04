@@ -17,7 +17,7 @@ export function FilterPill({ label, active, onClick }: FilterPillProps) {
       className={cn(
         "px-4 font-medium transition-colors",
         active
-          ? "bg-gradient-cta text-text-on-accent shadow-glow-cta"
+          ? "bg-[#EEDBFF] text-canvas"
           : "bg-surface text-text-secondary hover:bg-surface-raised hover:text-text-primary",
       )}
     >
