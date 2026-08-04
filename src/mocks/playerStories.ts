@@ -11,7 +11,7 @@ export const playerStories: PlayerStory[] = [
     description: "The untold story of Virat's relentless pursuit of greatness and legacy.",
     duration: "84 mins",
     accessTier: "PREMIUM",
-    thumbnail: img("ps-1", 600, 800),
+    thumbnail: athletePhotos["virat kohli"],
   },
   {
     id: "ps-2",
@@ -22,7 +22,7 @@ export const playerStories: PlayerStory[] = [
     description: "Tracing the final path of the magician to his ultimate crowning moment.",
     duration: "102 mins",
     accessTier: "PREMIUM",
-    thumbnail: img("ps-2", 600, 800),
+    thumbnail: athletePhotos["lionel messi"],
   },
   {
     id: "ps-3",
@@ -33,7 +33,7 @@ export const playerStories: PlayerStory[] = [
     description: "Exclusive sit-down on the strategy and mindset behind the finishing touch.",
     duration: "45 mins",
     accessTier: "FREE",
-    thumbnail: img("ps-3", 600, 800),
+    thumbnail: athletePhotos["ms dhoni"],
   },
   {
     id: "ps-4",
@@ -44,7 +44,7 @@ export const playerStories: PlayerStory[] = [
     description: "Inside the cockpit: the technical and physical toll of being a 7-time champion.",
     duration: "68 mins",
     accessTier: "PREMIUM",
-    thumbnail: img("ps-4", 600, 800),
+    thumbnail: athletePhotos["lewis hamilton"],
   },
   {
     id: "ps-5",
@@ -55,6 +55,6 @@ export const playerStories: PlayerStory[] = [
     description: "A deep dive into the training regimen and strict lifestyle behind the legend.",
     duration: "55 mins",
     accessTier: "PREMIUM",
-    thumbnail: img("ps-5", 600, 800),
+    thumbnail: athletePhotos["cristiano ronaldo"],
   },
 ];
