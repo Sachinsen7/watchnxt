@@ -103,8 +103,14 @@ export function HeroBanner({ match, variant = "fullbleed" }: HeroBannerProps) {
           </motion.div>
         )}
 
-        <motion.div custom={5} initial="hidden" animate="visible" variants={textVariants} className="flex items-center gap-3">
-          <Button variant="gradient" size="lg" radius="md" startContent={<Play className="h-4 w-4 fill-current" />}>
+        <motion.div custom={5} initial="hidden" animate="visible" variants={textVariants} className="flex items-center gap-3 w-full">
+          <Button
+            variant="gradient"
+            size="lg"
+            radius="md"
+            className="w-full max-w-[280px]"
+            startContent={<Play className="h-4 w-4 fill-current" />}
+          >
             Watch Live
           </Button>
           {framed && (

@@ -72,7 +72,7 @@ export function HomePage() {
           ))}
         </Rail>
 
-        <Rail title="Trending Now" subtitle="Explore the Trending Content on WatchNXT" viewAllHref="/highlights" itemClassName="w-[220px]">
+        <Rail title="Trending Now" subtitle="Explore the Trending Content on WatchNXT" viewAllHref="/highlights" itemClassName="w-[260px]">
           {shows.slice(0, 4).map((s, i) => (
             <TrendingPosterCard key={s.id} rank={i + 1} title={s.title} thumbnail={s.thumbnail} />
           ))}
