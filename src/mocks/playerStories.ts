@@ -1,5 +1,5 @@
 import type { PlayerStory } from "@/types/content";
-import { img } from "./sports";
+import { athletePhotos } from "./realImages";
 
 export const playerStories: PlayerStory[] = [
   {

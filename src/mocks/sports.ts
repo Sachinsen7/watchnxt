@@ -1,4 +1,5 @@
 import type { Sport } from "@/types/content";
+import { resolveRealImage } from "./realImages";
 
 export const sports: Sport[] = [
   { id: "cricket", name: "Cricket", colorVar: "var(--sport-cricket)" },
@@ -9,6 +10,7 @@ export const sports: Sport[] = [
   { id: "basketball", name: "Basketball", colorVar: "var(--sport-basketball)" },
 ];
 
-export function img(seed: string, w = 800, h = 450) {
-  return `https://picsum.photos/seed/${seed}/${w}/${h}`;
+/** Real, self-hosted sport/athlete photography, keyed off the descriptive seed. */
+export function img(seed: string, _w = 800, _h = 450) {
+  return resolveRealImage(seed);
 }
