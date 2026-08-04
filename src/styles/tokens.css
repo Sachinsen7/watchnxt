@@ -1,0 +1,43 @@
+
+:root,
+[data-theme="black"] {
+  /* 3.1 base surfaces — matches the fixed page-background gradient (#000000 → #1A0C2C) */
+  --bg-canvas: 0 0 0;
+  --bg-canvas-alt: 26 12 44;
+  --bg-surface: 16 14 18;
+  --bg-surface-raised: 30 27 34;
+  --bg-sidebar: 12 7 20;
+  --border-subtle: 42 31 61;
+  /* pre-mixed (not opacity-composable) — used without a `/NN` suffix */
+  --border-glow: rgba(168, 85, 247, 0.45);
+
+  /* 3.3 action colors */
+  --accent-primary: 255 122 26;
+  --accent-primary-light: 255 165 61;
+  --accent-secondary: 34 211 238;
+  --accent-secondary-muted: 14 116 144;
+  --accent-tertiary: 236 178 255;
+
+  /* 3.4 status & badges */
+  --live-red: 239 59 77;
+  --live-red-dim: rgba(239, 59, 77, 0.25);
+  --premium-gold: 245 185 61;
+  --free-grey: 125 118 136;
+  --success: 34 197 94;
+  --error: 240 68 56;
+  --warning: 251 191 36;
+
+  /* 3.5 text */
+  --text-primary: 238 219 255;
+  --text-secondary: 184 178 199;
+  --text-tertiary: 122 115 144;
+  --text-on-accent: 11 7 16;
+
+  /* 3.6 sport identity tags */
+  --sport-cricket: 74 222 128;
+  --sport-football: 96 165 250;
+  --sport-f1: 248 113 113;
+  --sport-tennis: 250 204 21;
+  --sport-kabaddi: 251 146 60;
+  --sport-basketball: 249 115 22;
+}

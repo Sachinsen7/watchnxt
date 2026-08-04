@@ -1,0 +1,170 @@
+import type { Match } from "@/types/content";
+import { img } from "./sports";
+
+const inHours = (h: number) => new Date(Date.now() + h * 60 * 60 * 1000).toISOString();
+const inDays = (d: number, h = 0) => new Date(Date.now() + d * 86400000 + h * 3600000).toISOString();
+
+export const heroMatch: Match = {
+  id: "m-hero",
+  sport: "cricket",
+  league: "ICC Champions Trophy",
+  status: "live",
+  title: "India vs Australia",
+  teams: [
+    { name: "India", short: "IND" },
+    { name: "Australia", short: "AUS" },
+  ],
+  scoreLine: "245/4",
+  scoreSubLine: "Overs 34.2",
+  venue: "Narendra Modi Stadium, Ahmedabad",
+  startsAt: inHours(-2),
+  viewerCount: 1_200_000,
+  tags: ["4K UHD", "Multilingual", "Dolby Atmos"],
+  thumbnail: img("hero-cricket", 1600, 900),
+};
+
+export const liveMatches: Match[] = [
+  heroMatch,
+  {
+    id: "m-live-1",
+    sport: "football",
+    league: "UEFA Champions League",
+    status: "live",
+    title: "Real Madrid vs Man City",
+    teams: [
+      { name: "Real Madrid", short: "MC" },
+      { name: "Man City", short: "LIV" },
+    ],
+    scoreLine: "2 - 1",
+    scoreSubLine: "72' Second Half",
+    startsAt: inHours(-1),
+    viewerCount: 850_000,
+    thumbnail: img("live-football", 800, 450),
+  },
+  {
+    id: "m-live-2",
+    sport: "f1",
+    league: "Abu Dhabi Grand Prix",
+    status: "live",
+    title: "Formula 1: World Tour",
+    teams: [
+      { name: "Verstappen", short: "VER" },
+      { name: "Field", short: "F" },
+    ],
+    scoreLine: "Lap 42/58",
+    scoreSubLine: "Current Leader: Verstappen",
+    startsAt: inHours(-1),
+    viewerCount: 420_000,
+    thumbnail: img("live-f1", 800, 450),
+  },
+  {
+    id: "m-live-3",
+    sport: "kabaddi",
+    league: "Pro Kabaddi",
+    status: "live",
+    title: "Patna Pirates vs Puneri Paltan",
+    teams: [
+      { name: "Patna Pirates", short: "PP" },
+      { name: "Puneri Paltan", short: "PUN" },
+    ],
+    scoreLine: "32 - 28",
+    scoreSubLine: "2nd Half • 08:45",
+    startsAt: inHours(-1),
+    viewerCount: 112_000,
+    thumbnail: img("live-kabaddi", 800, 450),
+  },
+  {
+    id: "m-live-4",
+    sport: "basketball",
+    league: "NBA",
+    status: "live",
+    title: "Lakers vs Warriors",
+    teams: [
+      { name: "Lakers", short: "LAL" },
+      { name: "Warriors", short: "GSW" },
+    ],
+    scoreLine: "108 - 112",
+    scoreSubLine: "4th Quarter • 02:11",
+    startsAt: inHours(-1),
+    viewerCount: 2_100_000,
+    thumbnail: img("live-basketball", 800, 450),
+  },
+  {
+    id: "m-live-5",
+    sport: "tennis",
+    league: "ATP Finals",
+    status: "live",
+    title: "Alcaraz vs Djokovic",
+    teams: [
+      { name: "Alcaraz", short: "ALC" },
+      { name: "Djokovic", short: "DJO" },
+    ],
+    scoreLine: "6-4, 3-6, 4-3",
+    scoreSubLine: "Set 3 • Game 6",
+    startsAt: inHours(-1),
+    viewerCount: 228_000,
+    thumbnail: img("live-tennis", 800, 450),
+  },
+];
+
+export const upcomingMatches: Match[] = [
+  {
+    id: "m-up-1",
+    sport: "cricket",
+    league: "ICC Champions Trophy",
+    status: "upcoming",
+    title: "India vs Australia",
+    teams: [
+      { name: "India", short: "IND" },
+      { name: "Australia", short: "AUS" },
+    ],
+    venue: "Narendra Modi Stadium, Ahmedabad",
+    startsAt: inDays(2, 14),
+    tags: ["HD", "MULTI-LANG"],
+    thumbnail: img("upcoming-cricket", 800, 450),
+  },
+  {
+    id: "m-up-2",
+    sport: "football",
+    league: "Premier League",
+    status: "upcoming",
+    title: "Manchester City vs Arsenal",
+    teams: [
+      { name: "Man City", short: "MCI" },
+      { name: "Arsenal", short: "ARS" },
+    ],
+    venue: "Etihad Stadium, Manchester",
+    startsAt: inDays(1, 8),
+    tags: ["HD"],
+    thumbnail: img("upcoming-football-1", 800, 450),
+  },
+  {
+    id: "m-up-3",
+    sport: "football",
+    league: "La Liga",
+    status: "upcoming",
+    title: "Real Madrid vs Barcelona",
+    teams: [
+      { name: "Real Madrid", short: "RMA" },
+      { name: "Barcelona", short: "BAR" },
+    ],
+    venue: "Santiago Bernabéu, Madrid",
+    startsAt: inDays(4, 22),
+    tags: ["HD", "MULTI-LANG"],
+    thumbnail: img("upcoming-football-2", 800, 450),
+  },
+  {
+    id: "m-up-4",
+    sport: "f1",
+    league: "Formula 1",
+    status: "upcoming",
+    title: "Red Bull Ring Grand Prix",
+    teams: [
+      { name: "Red Bull", short: "RBR" },
+      { name: "Ferrari", short: "FER" },
+    ],
+    startsAt: inDays(3, 6),
+    tags: ["HD"],
+    thumbnail: img("upcoming-f1", 800, 450),
+  },
+];

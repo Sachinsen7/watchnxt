@@ -1,0 +1,54 @@
+@import "./tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+
+  body {
+    @apply bg-gradient-page-bg text-text-primary;
+    background-attachment: fixed;
+    background-color: #000000;
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-text-primary;
+  }
+
+
+  *:focus {
+    outline: none;
+  }
+  *:focus-visible {
+    outline: 2px solid rgb(var(--accent-secondary));
+    outline-offset: 2px;
+  }
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: none;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-gradient-brand {
+    background-image: theme("backgroundImage.gradient-brand");
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
