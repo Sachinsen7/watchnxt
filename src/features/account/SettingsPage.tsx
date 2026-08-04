@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Laptop, Tv, Smartphone } from "lucide-react";
@@ -35,7 +36,7 @@ export function SettingsPage() {
           <p className="mt-1 text-sm text-text-secondary">Customize your WatchNXT experience.</p>
         </div>
 
-        <section>
+        <RevealSection>
           <h2 className="mb-4 font-display text-lg font-bold text-text-primary">Account &amp; Profile</h2>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             <div className="rounded-lg border border-white/10 bg-surface p-6">
@@ -57,9 +58,9 @@ export function SettingsPage() {
               </Button>
             </div>
           </div>
-        </section>
+        </RevealSection>
 
-        <section>
+        <RevealSection>
           <h2 className="mb-4 font-display text-lg font-bold text-text-primary">Playback Settings</h2>
           <div className="rounded-lg border border-white/10 bg-surface p-6">
             <div className="flex flex-wrap items-center justify-between gap-4">
@@ -97,9 +98,9 @@ export function SettingsPage() {
               </div>
             </div>
           </div>
-        </section>
+        </RevealSection>
 
-        <section>
+        <RevealSection>
           <div className="mb-4 flex items-center justify-between">
             <h2 className="font-display text-lg font-bold text-text-primary">Device Management</h2>
             <button className="text-sm font-medium text-danger">Sign out of all devices</button>
@@ -116,7 +117,7 @@ export function SettingsPage() {
               </div>
             ))}
           </div>
-        </section>
+        </RevealSection>
 
         <p className="text-center text-xs text-text-tertiary">
           Need more help? Visit our{" "}

@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { TrendingUp, ChevronRight, PlayCircle } from "lucide-react";
@@ -86,7 +87,7 @@ export function PopularLeaguesPage() {
       </div>
 
       <div className="flex flex-col gap-14 px-6 py-10 md:px-10">
-        <section>
+        <RevealSection>
           <div className="mb-5 flex items-center justify-between">
             <h2 className="font-display text-2xl font-bold text-text-primary">Major Leagues</h2>
             <Link to="#" className="text-sm font-medium text-tertiary">
@@ -129,9 +130,9 @@ export function PopularLeaguesPage() {
               </CardBase>
             ))}
           </div>
-        </section>
+        </RevealSection>
 
-        <section>
+        <RevealSection>
           <h2 className="mb-5 flex items-center gap-2 font-display text-2xl font-bold text-text-primary">
             <TrendingUp className="h-5 w-5 text-secondary" /> Trending Leagues
           </h2>
@@ -148,9 +149,9 @@ export function PopularLeaguesPage() {
               </div>
             ))}
           </div>
-        </section>
+        </RevealSection>
 
-        <section>
+        <RevealSection>
           <h2 className="mb-5 font-display text-2xl font-bold text-text-primary">Recently Viewed</h2>
           <div className="grid grid-cols-2 gap-5 sm:grid-cols-4">
             {recentlyViewed.map((r) => (
@@ -165,7 +166,7 @@ export function PopularLeaguesPage() {
               </CardBase>
             ))}
           </div>
-        </section>
+        </RevealSection>
       </div>
 
       <Footer />

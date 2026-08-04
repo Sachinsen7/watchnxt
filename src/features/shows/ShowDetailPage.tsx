@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
 import { Play, Clapperboard, Share2, Download, Plus } from "lucide-react";
@@ -95,7 +96,7 @@ export function ShowDetailPage() {
 
       <div className="grid grid-cols-1 gap-8 px-6 pb-10 pt-8 md:px-10 lg:grid-cols-[1fr_320px]">
         <div className="flex flex-col gap-10">
-          <section>
+          <RevealSection>
             <div className="mb-4 flex items-center justify-between">
               <h2 className="font-display text-xl font-bold text-text-primary">Episodes</h2>
               <div className="flex gap-2">
@@ -132,9 +133,9 @@ export function ShowDetailPage() {
                 </div>
               ))}
             </div>
-          </section>
+          </RevealSection>
 
-          <section>
+          <RevealSection>
             <h2 className="mb-4 font-display text-xl font-bold text-text-primary">Trailers &amp; Extras</h2>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
               {extras.map((e) => (
@@ -153,7 +154,7 @@ export function ShowDetailPage() {
                 </div>
               ))}
             </div>
-          </section>
+          </RevealSection>
         </div>
 
         <aside className="flex flex-col gap-6">

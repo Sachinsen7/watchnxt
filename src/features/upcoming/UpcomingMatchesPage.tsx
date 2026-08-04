@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Bell } from "lucide-react";
@@ -105,7 +106,7 @@ export function UpcomingMatchesPage() {
       </div>
 
       <div className="flex flex-col gap-14 px-6 py-10 md:px-10">
-        <section>
+        <RevealSection>
           <div className="mb-5 flex items-center justify-between">
             <h2 className="font-display text-2xl font-bold text-text-primary">Matches For You</h2>
             <Link to="#" className="text-sm font-medium text-tertiary">
@@ -146,7 +147,7 @@ export function UpcomingMatchesPage() {
               </CardBase>
             ))}
           </div>
-        </section>
+        </RevealSection>
 
         <Rail title="This Week's Big Matches" itemClassName="w-[340px]" alwaysShowArrows>
           {bigMatches.map((m, i) => (

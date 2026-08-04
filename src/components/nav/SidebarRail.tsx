@@ -117,10 +117,10 @@ export function SidebarRail() {
         boxShadow: collapsed ? "0 0 0 rgba(0,0,0,0)" : "12px 0 40px rgba(0,0,0,0.45)",
       }}
       transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
-      className="fixed left-0 top-0 z-30 hidden h-screen flex-col justify-between overflow-hidden overflow-y-auto bg-black/40 px-2 py-6 backdrop-blur-xl md:flex"
+      className="fixed left-0 top-0 z-30 hidden h-screen flex-col justify-between overflow-hidden overflow-y-auto bg-black/40 px-2 py-6 backdrop-blur-xl [-ms-overflow-style:none] [scrollbar-width:none] md:flex [&::-webkit-scrollbar]:hidden"
     >
       <div className="flex flex-col gap-1">
-        <div className={cn("mb-4 flex items-center px-2", collapsed ? "justify-center" : "justify-start")}>
+        <div className="mb-4 flex items-center justify-center px-2">
           <Logo compact={collapsed} />
         </div>
 
@@ -133,7 +133,7 @@ export function SidebarRail() {
               transition={{ duration: 0.2 }}
               className="overflow-hidden px-2 pb-3"
             >
-              <Button variant="gradient" className="w-full" onPress={() => navigate("/premium")}>
+              <Button radius="full" variant="gradient" className="w-full" onPress={() => navigate("/premium")}>
                 Subscribe
               </Button>
             </motion.div>

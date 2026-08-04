@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useParams } from "react-router-dom";
 import { Play, ListPlus, Share2 } from "lucide-react";
 import { TopBar } from "@/components/nav/TopBar";
@@ -50,14 +51,14 @@ export function PlayerStoryDetailPage() {
           </Button>
         </div>
 
-        <section className="mt-10">
+        <RevealSection className="mt-10">
           <h2 className="mb-4 font-display text-xl font-bold text-text-primary">More Stories</h2>
           <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
             {stories.filter((s) => s.id !== story.id).map((s) => (
               <PlayerStoryCard key={s.id} story={s} />
             ))}
           </div>
-        </section>
+        </RevealSection>
       </div>
 
       <Footer />

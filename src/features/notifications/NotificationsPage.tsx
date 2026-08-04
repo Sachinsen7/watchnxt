@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { Settings, BellOff, HelpCircle, Smartphone } from "lucide-react";
 import { TopBar } from "@/components/nav/TopBar";
 import { Footer } from "@/components/nav/Footer";
@@ -75,7 +76,7 @@ export function NotificationsPage() {
           </div>
 
           <div className="mt-8 flex flex-col gap-8">
-            <section>
+            <RevealSection>
               <h2 className="mb-4 text-xs font-bold uppercase tracking-widest text-text-tertiary">Today</h2>
               <div className="flex flex-col gap-4">
                 {today.map((n) => (
@@ -104,9 +105,9 @@ export function NotificationsPage() {
                   </div>
                 ))}
               </div>
-            </section>
+            </RevealSection>
 
-            <section>
+            <RevealSection>
               <h2 className="mb-4 text-xs font-bold uppercase tracking-widest text-text-tertiary">Yesterday</h2>
               <div className="flex flex-col gap-4">
                 {yesterday.map((n) => (
@@ -119,9 +120,9 @@ export function NotificationsPage() {
                   </div>
                 ))}
               </div>
-            </section>
+            </RevealSection>
 
-            <section>
+            <RevealSection>
               <h2 className="mb-4 text-xs font-bold uppercase tracking-widest text-text-tertiary">
                 Earlier This Week
               </h2>
@@ -142,7 +143,7 @@ export function NotificationsPage() {
                   </div>
                 ))}
               </div>
-            </section>
+            </RevealSection>
           </div>
         </div>
 

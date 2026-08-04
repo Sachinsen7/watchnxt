@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { Input } from "@heroui/react";
 import { Search } from "lucide-react";
 import { TopBar } from "@/components/nav/TopBar";
@@ -62,7 +63,7 @@ export function CategoriesPage() {
       </div>
 
       <div className="flex flex-col gap-14 px-6 py-12 md:px-10">
-        <section>
+        <RevealSection>
           <h2 className="mb-5 font-display text-2xl font-bold text-text-primary">Browse by Sport</h2>
           <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
             {sportTiles.map((s) => (
@@ -81,9 +82,9 @@ export function CategoriesPage() {
               </CardBase>
             ))}
           </div>
-        </section>
+        </RevealSection>
 
-        <section>
+        <RevealSection>
           <h2 className="mb-5 font-display text-2xl font-bold text-text-primary">Recommended for You</h2>
           <div className="flex gap-5 overflow-x-auto pb-2">
             {recommended.map((r) => (
@@ -105,7 +106,7 @@ export function CategoriesPage() {
               </CardBase>
             ))}
           </div>
-        </section>
+        </RevealSection>
       </div>
 
       <Footer />

@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Eye } from "lucide-react";
@@ -75,7 +76,7 @@ export function ShortsPage() {
       </div>
 
       <div className="flex flex-col gap-14 px-6 py-10 md:px-10">
-        <section>
+        <RevealSection>
           <div className="mb-5 flex items-center justify-between">
             <h2 className="font-display text-2xl font-bold text-text-primary">Trending Today</h2>
             <Link to="#" className="text-sm font-medium text-tertiary">
@@ -89,9 +90,9 @@ export function ShortsPage() {
               </div>
             ))}
           </div>
-        </section>
+        </RevealSection>
 
-        <section>
+        <RevealSection>
           <h2 className="mb-5 font-display text-2xl font-bold text-text-primary">Latest Uploads</h2>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
             {latestUploads.map((u) => (
@@ -107,7 +108,7 @@ export function ShortsPage() {
               </div>
             ))}
           </div>
-        </section>
+        </RevealSection>
       </div>
 
       <Footer />

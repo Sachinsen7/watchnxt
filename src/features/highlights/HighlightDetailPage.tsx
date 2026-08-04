@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import {
@@ -146,7 +147,7 @@ export function HighlightDetailPage() {
           <button className="mt-2 text-sm font-semibold text-secondary">Show More</button>
         </div>
 
-        <section className="mt-10">
+        <RevealSection className="mt-10">
           <Rail itemClassName="w-[220px]" title="Key Moments">
             {keyMoments.map((m, i) => (
               <button
@@ -173,9 +174,9 @@ export function HighlightDetailPage() {
               </button>
             ))}
           </Rail>
-        </section>
+        </RevealSection>
 
-        <section className="mt-10">
+        <RevealSection className="mt-10">
           <div className="mb-4 flex items-center justify-between">
             <h2 className="font-display text-xl font-bold text-text-primary">More from this match</h2>
             <button className="text-sm font-medium text-tertiary">View All &gt;</button>
@@ -198,7 +199,7 @@ export function HighlightDetailPage() {
               </CardBase>
             ))}
           </div>
-        </section>
+        </RevealSection>
       </div>
 
       <Footer />

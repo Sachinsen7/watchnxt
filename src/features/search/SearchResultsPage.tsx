@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { TrendingUp, ChevronRight, Shield, Plus, Play } from "lucide-react";
@@ -118,7 +119,7 @@ export function SearchResultsPage() {
             </div>
           )}
 
-          <section>
+          <RevealSection>
             <div className="mb-5 flex items-center justify-between">
               <h2 className="font-display text-xl font-bold text-text-primary">Live Matches</h2>
               <Link to="/live" className="text-sm font-medium text-tertiary">
@@ -157,9 +158,9 @@ export function SearchResultsPage() {
                 </div>
               ))}
             </div>
-          </section>
+          </RevealSection>
 
-          <section className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <RevealSection className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             <div>
               <h2 className="mb-4 font-display text-xl font-bold text-text-primary">Top Players</h2>
               <div className="flex flex-col gap-3">
@@ -198,9 +199,9 @@ export function SearchResultsPage() {
                 ))}
               </div>
             </div>
-          </section>
+          </RevealSection>
 
-          <section>
+          <RevealSection>
             <div className="mb-5 flex items-center justify-between">
               <h2 className="font-display text-xl font-bold text-text-primary">Recent Highlights</h2>
               <Link to="/highlights" className="text-sm font-medium text-tertiary">
@@ -225,16 +226,16 @@ export function SearchResultsPage() {
                 </Link>
               ))}
             </div>
-          </section>
+          </RevealSection>
 
-          <section>
+          <RevealSection>
             <h2 className="mb-5 font-display text-xl font-bold text-text-primary">WatchNXT Shorts</h2>
             <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
               {[...shorts, ...shorts].slice(0, 6).map((s, i) => (
                 <ShortsCard key={`${s.id}-${i}`} short={s} />
               ))}
             </div>
-          </section>
+          </RevealSection>
         </div>
 
         <aside className="flex flex-col gap-6">

@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Eye, Clock, Play, Share2, SlidersHorizontal, Plus } from "lucide-react";
@@ -165,7 +166,7 @@ export function HighlightsPage() {
             ))}
           </div>
 
-          <section>
+          <RevealSection>
             <div className="mb-5 flex items-center justify-between">
               <h2 className="font-display text-xl font-bold text-text-primary">Recommended For You</h2>
               <Link to="#" className="text-sm font-medium text-tertiary">
@@ -177,17 +178,17 @@ export function HighlightsPage() {
                 <HighlightGridCard key={`rec-${h.id}`} highlight={h} index={i} />
               ))}
             </div>
-          </section>
+          </RevealSection>
 
           {continueWatching.length > 0 && (
-            <section>
+            <RevealSection>
               <h2 className="mb-5 font-display text-xl font-bold text-text-primary">Continue Watching</h2>
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {continueWatching.map((item) => (
                   <ContinueWatchingCard key={item.id} item={item} />
                 ))}
               </div>
-            </section>
+            </RevealSection>
           )}
         </div>
 

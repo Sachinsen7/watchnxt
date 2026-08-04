@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Play, Headphones, Share2, Clock } from "lucide-react";
@@ -136,7 +137,7 @@ export function PlayerStoriesPage() {
       </div>
 
       <div className="flex flex-col gap-14 px-6 py-10 md:px-10">
-        <section>
+        <RevealSection>
           <div className="mb-1 flex items-center justify-between">
             <h2 className="font-display text-2xl font-bold text-text-primary">Trending Stories</h2>
             <Link to="#" className="text-sm font-medium text-tertiary">
@@ -149,9 +150,9 @@ export function PlayerStoriesPage() {
               <StoryGridCard key={s.id} story={s} tall />
             ))}
           </div>
-        </section>
+        </RevealSection>
 
-        <section>
+        <RevealSection>
           <h2 className="mb-5 font-display text-2xl font-bold text-text-primary">Legends Collection</h2>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             {legends.map((l) => (
@@ -166,7 +167,7 @@ export function PlayerStoriesPage() {
               </div>
             ))}
           </div>
-        </section>
+        </RevealSection>
 
         <Rail title="All Stories" itemClassName="w-[300px]" alwaysShowArrows>
           {stories.map((s) => (

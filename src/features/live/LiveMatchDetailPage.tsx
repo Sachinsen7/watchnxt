@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useParams, Link } from "react-router-dom";
 import { Heart, Bell, CalendarDays, MapPin, CloudSun, TrendingUp } from "lucide-react";
 import { TopBar } from "@/components/nav/TopBar";
@@ -101,7 +102,7 @@ export function LiveMatchDetailPage() {
 
       <div className="grid grid-cols-1 gap-8 px-6 py-12 md:px-10 lg:grid-cols-[minmax(0,1fr)_340px]">
         <div className="flex min-w-0 flex-col gap-10">
-          <section>
+          <RevealSection>
             <h2 className="mb-4 font-display text-xl font-bold text-text-primary">Match Information</h2>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
               {matchInfo(match).map((info) => (
@@ -119,9 +120,9 @@ export function LiveMatchDetailPage() {
                 </div>
               ))}
             </div>
-          </section>
+          </RevealSection>
 
-          <section>
+          <RevealSection>
             <h2 className="mb-6 font-display text-xl font-bold text-text-primary">Match Timeline</h2>
             <div className="relative rounded-md border border-white/10 bg-surface px-8 py-6 shadow-lg shadow-black/40">
               <div className="absolute left-8 right-8 top-[30px] h-px bg-white/10" />
@@ -134,9 +135,9 @@ export function LiveMatchDetailPage() {
                 ))}
               </div>
             </div>
-          </section>
+          </RevealSection>
 
-          <section>
+          <RevealSection>
             <h2 className="mb-4 font-display text-xl font-bold text-text-primary">Playing XI</h2>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
@@ -169,7 +170,7 @@ export function LiveMatchDetailPage() {
             <Button variant="flat" radius="full" className="mt-4 w-full bg-surface-raised text-text-primary">
               View Full Squads
             </Button>
-          </section>
+          </RevealSection>
 
           <Rail title="Related Content" itemClassName="w-[280px]" alwaysShowArrows>
             {highlights.map((h) => (

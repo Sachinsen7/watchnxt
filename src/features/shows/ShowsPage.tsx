@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Star, Plus, Play } from "lucide-react";
@@ -99,7 +100,7 @@ export function ShowsPage() {
       </div>
 
       <div className="flex flex-col gap-14 px-6 py-10 md:px-10">
-        <section>
+        <RevealSection>
           <div className="mb-5 flex items-center justify-between">
             <h2 className="font-display text-2xl font-bold text-text-primary">Trending Shows</h2>
             <Link to="#" className="text-sm font-medium text-tertiary">
@@ -111,7 +112,7 @@ export function ShowsPage() {
               <ShowCard key={s.id} show={s} />
             ))}
           </div>
-        </section>
+        </RevealSection>
 
         <Rail title="New Releases" itemClassName="w-[240px]" alwaysShowArrows>
           {newReleases.map((r) => (

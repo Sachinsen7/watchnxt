@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaGem } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import { HeroBanner } from "@/components/cards/HeroBanner";
 import { Rail } from "@/components/rails/Rail";
 import { RevealSection } from "@/components/rails/RevealSection";
@@ -49,6 +50,14 @@ export function HomePage() {
           </Rail>
         )}
 
+        <Link to="/upcoming" className="block overflow-hidden rounded-lg border border-white/10">
+          <img
+            src="/images/ads/season-banner.jpg"
+            alt="WatchNXT Premier Cup, Season 2026 — Starts March 28"
+            className="h-auto w-full object-cover"
+          />
+        </Link>
+
         <Rail title="Live Now" subtitle="Watch live sports happening right now." viewAllHref="/live" itemClassName="w-[320px]">
           {liveMatches.map((m) => (
             <LiveMatchCard key={m.id} match={m} />
@@ -65,6 +74,14 @@ export function HomePage() {
             <UpcomingMatchCard key={m.id} match={m} />
           ))}
         </Rail>
+
+        <Link to="/premium" className="block overflow-hidden rounded-lg border border-white/10">
+          <img
+            src="/images/ads/premium-banner.jpg"
+            alt="Sponsored: Upgrade to Premium — enjoy ad-free streaming"
+            className="h-auto w-full object-cover"
+          />
+        </Link>
 
         <Rail title="Popular Leagues" subtitle="Explore the world's biggest sports leagues and tournaments." viewAllHref="/leagues" itemClassName="w-[220px]">
           {leagues.map((l) => (

@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import {
@@ -244,7 +245,7 @@ export function LiveMatchPlayerPage() {
           </div>
         </div>
 
-        <section className="mt-10">
+        <RevealSection className="mt-10">
           <div className="mb-4 flex items-center justify-between">
             <h2 className="font-display text-xl font-bold text-text-primary">Related Content</h2>
             <Link
@@ -272,7 +273,7 @@ export function LiveMatchPlayerPage() {
               </Link>
             ))}
           </div>
-        </section>
+        </RevealSection>
       </div>
 
       <Footer />

@@ -5,12 +5,14 @@ import { cn } from "@/lib/utils";
 interface RevealSectionProps {
   children: ReactNode;
   className?: string;
+  id?: string;
 }
 
 /** Same scroll-into-view fade/slide used by Rail (§6.1), for the non-carousel grid sections. */
-export function RevealSection({ children, className }: RevealSectionProps) {
+export function RevealSection({ children, className, id }: RevealSectionProps) {
   return (
     <motion.section
+      id={id}
       className={cn(className)}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}

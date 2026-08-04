@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { Link } from "react-router-dom";
 import { Pencil, Share2, Bell, MessageSquare, ShieldCheck, Settings, Wallet, History, Clock, Ticket, Film } from "lucide-react";
 import { TrophyIcon } from "@heroicons/react/24/solid";
@@ -108,7 +109,7 @@ export function ProfilePage() {
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_320px]">
           <div className="flex flex-col gap-10">
-            <section>
+            <RevealSection>
               <div className="mb-4 flex items-center justify-between">
                 <h2 className="font-display text-xl font-bold text-text-primary">Recent Activity</h2>
                 <button className="text-sm font-medium text-tertiary">View History</button>
@@ -129,9 +130,9 @@ export function ProfilePage() {
                   </div>
                 ))}
               </div>
-            </section>
+            </RevealSection>
 
-            <section className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+            <RevealSection className="grid grid-cols-1 gap-8 sm:grid-cols-2">
               <div>
                 <h2 className="mb-4 font-display text-xl font-bold text-text-primary">Favorite Leagues</h2>
                 <div className="flex gap-3">
@@ -161,9 +162,9 @@ export function ProfilePage() {
                   ))}
                 </div>
               </div>
-            </section>
+            </RevealSection>
 
-            <section>
+            <RevealSection>
               <h2 className="mb-4 font-display text-xl font-bold text-text-primary">Watch Statistics</h2>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 {[
@@ -201,9 +202,9 @@ export function ProfilePage() {
                   </div>
                 ))}
               </div>
-            </section>
+            </RevealSection>
 
-            <section>
+            <RevealSection>
               <h2 className="mb-4 font-display text-xl font-bold text-text-primary">Quick Actions</h2>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 {quickActions.map((a) => (
@@ -217,7 +218,7 @@ export function ProfilePage() {
                   </Link>
                 ))}
               </div>
-            </section>
+            </RevealSection>
           </div>
 
           <aside className="flex flex-col gap-6">

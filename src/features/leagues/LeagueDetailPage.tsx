@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useParams, Link } from "react-router-dom";
 import { Users, CalendarDays, Repeat, PlayCircle, Video, Film, Bell, Share2, Plus } from "lucide-react";
 import {
@@ -130,7 +131,7 @@ export function LeagueDetailPage() {
       </div>
 
       <div className="flex flex-col gap-14 px-6 py-12 md:px-10">
-        <section className="grid grid-cols-1 gap-8 lg:grid-cols-[1.2fr_1fr]">
+        <RevealSection className="grid grid-cols-1 gap-8 lg:grid-cols-[1.2fr_1fr]">
           <div>
             <h2 className="font-display text-xl font-bold text-text-primary">League Overview</h2>
             <p className="mt-3 text-sm leading-relaxed text-text-secondary">
@@ -147,9 +148,9 @@ export function LeagueDetailPage() {
             <StatBox value="1.2k" label="Videos" icon={Video} />
             <StatBox value="450+" label="Highlights" icon={Film} />
           </div>
-        </section>
+        </RevealSection>
 
-        <section>
+        <RevealSection>
           <h2 className="mb-5 flex items-center gap-2 font-display text-2xl font-bold text-text-primary">
             <span className="h-2 w-2 rounded-full bg-live" /> Ongoing Matches
           </h2>
@@ -180,9 +181,9 @@ export function LeagueDetailPage() {
               </div>
             ))}
           </div>
-        </section>
+        </RevealSection>
 
-        <section>
+        <RevealSection>
           <h2 className="mb-5 font-display text-2xl font-bold text-text-primary">Upcoming Fixtures</h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {upcomingFixtures.map((f) => (
@@ -201,9 +202,9 @@ export function LeagueDetailPage() {
               </div>
             ))}
           </div>
-        </section>
+        </RevealSection>
 
-        <section>
+        <RevealSection>
           <h2 className="mb-5 font-display text-2xl font-bold text-text-primary">Latest Highlights</h2>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {highlights.map((h) => (
@@ -223,9 +224,9 @@ export function LeagueDetailPage() {
               </Link>
             ))}
           </div>
-        </section>
+        </RevealSection>
 
-        <section>
+        <RevealSection>
           <h2 className="mb-5 font-display text-2xl font-bold text-text-primary">League Shorts</h2>
           <div className="flex gap-4 overflow-x-auto pb-2">
             {[...shorts, ...shorts].slice(0, 8).map((s, i) => (
@@ -234,9 +235,9 @@ export function LeagueDetailPage() {
               </div>
             ))}
           </div>
-        </section>
+        </RevealSection>
 
-        <section>
+        <RevealSection>
           <h2 className="mb-5 font-display text-2xl font-bold text-text-primary">Star Players</h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {starPlayers.map((p) => (
@@ -254,9 +255,9 @@ export function LeagueDetailPage() {
               </div>
             ))}
           </div>
-        </section>
+        </RevealSection>
 
-        <section id="standings" className="grid grid-cols-1 gap-8 lg:grid-cols-[1.3fr_1fr]">
+        <RevealSection id="standings" className="grid grid-cols-1 gap-8 lg:grid-cols-[1.3fr_1fr]">
           <div>
             <h2 className="mb-5 font-display text-2xl font-bold text-text-primary">Standings Preview</h2>
             <div className="overflow-hidden rounded-lg border border-white/10 bg-surface">
@@ -314,7 +315,7 @@ export function LeagueDetailPage() {
               ))}
             </div>
           </div>
-        </section>
+        </RevealSection>
       </div>
 
       <Footer />

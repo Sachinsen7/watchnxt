@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Input } from "@heroui/react";
@@ -107,7 +108,7 @@ export function SupportCenterPage() {
 
       <div className="grid grid-cols-1 gap-8 px-6 py-12 md:px-10 lg:grid-cols-[1fr_320px]">
         <div className="flex flex-col gap-12">
-          <section>
+          <RevealSection>
             <h2 className="mb-5 flex items-center gap-2 font-display text-2xl font-bold text-text-primary">
               <FileText className="h-5 w-5 text-secondary" /> Popular Help Articles
             </h2>
@@ -127,9 +128,9 @@ export function SupportCenterPage() {
                 </button>
               ))}
             </div>
-          </section>
+          </RevealSection>
 
-          <section>
+          <RevealSection>
             <h2 className="mb-5 font-display text-2xl font-bold text-text-primary">Contact Support</h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {contactMethods.map((m) => (
@@ -162,7 +163,7 @@ export function SupportCenterPage() {
                 </div>
               ))}
             </div>
-          </section>
+          </RevealSection>
 
           <FaqSection />
         </div>
@@ -227,7 +228,7 @@ function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section>
+    <RevealSection>
       <h2 className="mb-5 font-display text-2xl font-bold text-text-primary">Frequently Asked Questions</h2>
       <div className="flex flex-col gap-3">
         {faqs.map((f, i) => {
@@ -269,6 +270,6 @@ function FaqSection() {
           );
         })}
       </div>
-    </section>
+    </RevealSection>
   );
 }

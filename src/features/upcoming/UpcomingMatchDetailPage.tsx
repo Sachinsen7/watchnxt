@@ -1,3 +1,4 @@
+import { RevealSection } from "@/components/rails/RevealSection";
 import { useParams } from "react-router-dom";
 import { Bell, Plus, CalendarPlus, Users, CloudSun } from "lucide-react";
 import { TopBar } from "@/components/nav/TopBar";
@@ -109,16 +110,16 @@ export function UpcomingMatchDetailPage() {
       </div>
 
       <div className="flex flex-col gap-14 px-6 py-12 md:px-10">
-        <section className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
+        <RevealSection className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
           {metaChips.map((c) => (
             <div key={c.label} className="rounded-md border border-white/10 bg-surface px-3 py-3 text-center">
               <p className="text-[10px] font-bold uppercase tracking-wide text-text-tertiary">{c.label}</p>
               <p className="mt-1 text-sm font-bold text-text-primary">{c.value}</p>
             </div>
           ))}
-        </section>
+        </RevealSection>
 
-        <section>
+        <RevealSection>
           <div className="mb-5 flex items-center justify-between">
             <h2 className="font-display text-2xl font-bold text-text-primary">Probable XI</h2>
             <button className="text-sm font-medium text-tertiary">View Tactical View &gt;</button>
@@ -145,9 +146,9 @@ export function UpcomingMatchDetailPage() {
               </div>
             ))}
           </div>
-        </section>
+        </RevealSection>
 
-        <section className="grid grid-cols-1 gap-5 md:grid-cols-[1fr_1fr]">
+        <RevealSection className="grid grid-cols-1 gap-5 md:grid-cols-[1fr_1fr]">
           <div className="rounded-lg border border-white/10 bg-surface p-6 shadow-lg shadow-black/40">
             <h3 className="mb-4 font-display text-lg font-bold text-text-primary">Head-to-Head</h3>
             <div className="grid grid-cols-4 gap-4 text-center">
@@ -185,9 +186,9 @@ export function UpcomingMatchDetailPage() {
               </div>
             ))}
           </div>
-        </section>
+        </RevealSection>
 
-        <section>
+        <RevealSection>
           <h2 className="mb-5 font-display text-2xl font-bold text-text-primary">Key Players to Watch</h2>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {playerStories.slice(0, 2).map((s) => (
@@ -222,9 +223,9 @@ export function UpcomingMatchDetailPage() {
               </p>
             </div>
           </div>
-        </section>
+        </RevealSection>
 
-        <section className="rounded-2xl border border-white/10 bg-glow-violet-radial p-8 text-center shadow-lg shadow-black/40">
+        <RevealSection className="rounded-2xl border border-white/10 bg-glow-violet-radial p-8 text-center shadow-lg shadow-black/40">
           <h2 className="font-display text-xl font-bold text-text-primary">Match Predictor</h2>
           <p className="mt-1 text-sm text-text-secondary">Who will take the three points tonight?</p>
           <div className="mx-auto mt-6 flex h-2 max-w-xl overflow-hidden rounded-full bg-white/10">
@@ -237,7 +238,7 @@ export function UpcomingMatchDetailPage() {
             <span className="font-semibold text-secondary">{match.teams[1].name} 45%</span>
             <span className="font-semibold text-text-tertiary">Draw 13%</span>
           </div>
-        </section>
+        </RevealSection>
       </div>
 
       <Footer />
